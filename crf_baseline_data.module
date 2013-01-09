@@ -11,10 +11,15 @@ include_once 'crf_baseline_data.features.inc';
  * Implements hook_form_FORM_ID_alter().
  */
 function crf_baseline_data_form_baseline_data_node_form_alter(&$form, &$form_state, $form_id) {
-  if (isset($_GET['edit']['field_nc_request']['und'])) {
-    $instructions = t('Kindly upload any baseline data that you can provide.  This information would include latest data on topics such as food security, levels of malnutrition, landmines, disease incidence, scoll location, etc.  Much of this information would come from your regular surveys or assessments, but other will be relatively static information that will help with overall analysis'); 
-    $form['instruction'] = array(
-      '#markup' => $instructions,
-    );
+  $node = $form['#node'];
+  if (!isset($node->nid)) {
+    if (isset($_GET['edit']['field_nc_request']['und'])) {
+      $instructions = t('Kindly upload any baseline data that you can provide.  This information would include latest data on topics such as food security, levels of malnutrition, landmines, disease incidence, scoll location, etc.  Much of this information would come from your regular surveys or assessments, but other will be relatively static information that will help with overall analysis'); 
+      $form['instruction'] = array(
+        '#markup' => $instructions,
+      );
+    }
+    
+    $form['actions']['submit']['#value'] = t('Submit to OCHA');
   }
 }
