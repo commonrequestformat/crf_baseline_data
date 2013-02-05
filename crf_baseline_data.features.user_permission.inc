@@ -14,9 +14,9 @@ function crf_baseline_data_user_default_permissions() {
   $permissions['create baseline_data content'] = array(
     'name' => 'create baseline_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -25,8 +25,8 @@ function crf_baseline_data_user_default_permissions() {
   $permissions['delete any baseline_data content'] = array(
     'name' => 'delete any baseline_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -35,9 +35,9 @@ function crf_baseline_data_user_default_permissions() {
   $permissions['delete own baseline_data content'] = array(
     'name' => 'delete own baseline_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -46,8 +46,8 @@ function crf_baseline_data_user_default_permissions() {
   $permissions['edit any baseline_data content'] = array(
     'name' => 'edit any baseline_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -56,9 +56,9 @@ function crf_baseline_data_user_default_permissions() {
   $permissions['edit own baseline_data content'] = array(
     'name' => 'edit own baseline_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -67,8 +67,8 @@ function crf_baseline_data_user_default_permissions() {
   $permissions['view any unpublished baseline_data content'] = array(
     'name' => 'view any unpublished baseline_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'view_unpublished',
   );
